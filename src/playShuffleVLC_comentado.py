@@ -205,7 +205,13 @@ libreria = {"California_Uber_Alles":
             "Seattle_Party": 
                 {"track-number": 1, "artist": "Chastity Belt", "album": "No regrets", "location": "./biblioteca/Seattle_Party.flac"},
             "King_Kunta":
-                {"track-number": 3, "artist": "Kendrick Lamar", "album": "To Pimp A Butterfly", "location": "./biblioteca/King_Kunta.mp3"}   
+                {"track-number": 2, "artist": "Kendrick Lamar", "album": "To Pimp A Butterfly", "location": "./biblioteca/King_Kunta.mp3"},
+            "Against_the_moon":
+                {"track-number": 4, "artist": "Unknown", "album": "Unknown", "location": "./biblioteca/against_the_moon.mp3"},
+            "Elvis_Flaming_Star":
+                {"track-number": 5, "artist": "Unknown", "album": "Unknown", "location": "./biblioteca/Elvis_Flaming_Star.mp3"},
+            "Headless":
+                {"track-number": 6, "artist": "Unknown", "album": "Unknown", "location": "./biblioteca/Headless.mp3"}
             }
 
 playShuffleVLC(libreria, playList)
