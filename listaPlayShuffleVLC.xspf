@@ -38,10 +38,46 @@
 				<vlc:id>2</vlc:id>
 			</extension>
 		</track>
+		<track>
+			<location>./biblioteca/against_the_moon.mp3</location>
+			<title>Against the moon</title>
+			<creator>Unknown</creator>
+			<album>Unknown</album>
+			<trackNum>Unknown</trackNum>
+			<duration>Unknown</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>3</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>./biblioteca/Elvis_Flaming_Star.mp3</location>
+			<title>Elvis' Flaming Star</title>
+			<creator>Unknown</creator>
+			<album>Unknown</album>
+			<trackNum>Unknown</trackNum>
+			<duration>Unknown</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>4</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>./biblioteca/Headless.mp3</location>
+			<title>Headless</title>
+			<creator>Unknown</creator>
+			<album>Unknown</album>
+			<trackNum>Unknown</trackNum>
+			<duration>Unknown</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>5</vlc:id>
+			</extension>
+		</track>
 	</trackList>
 	<extension application="http://www.videolan.org/vlc/playlist/0">
 			<vlc:item tid="0"/>
 			<vlc:item tid="1"/>
 			<vlc:item tid="2"/>
+			<vlc:item tid="3"/>
+			<vlc:item tid="4"/>
+			<vlc:item tid="5"/>
 	</extension>
 </playlist>
