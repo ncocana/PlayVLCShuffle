@@ -1,4 +1,6 @@
 from accesoDatosOCP import prepararObjetoDatos
+from pathlib import Path
+from os import getcwd as getCurrentDirectory
 
 # espacios de nombres de los elementos
 # del schema xspf (por defecto) y vlc
@@ -6,7 +8,9 @@ xmlns = {"xmlns": "http://xspf.org/ns/0/",
         "xmlns:vlc": "http://www.videolan.org/vlc/playlist/ns/0/"}
 
 # origen de los datos: un fichero XML
-data = "listaPlayShuffleVLC.xspf"
+working_directory = Path(getCurrentDirectory())
+pathFileXML = working_directory / "src" / "listaPlayShuffleVLC.xspf"
+data = str(pathFileXML)
 
 '''
 Estructuras de datos en memoria:
