@@ -1,4 +1,3 @@
-from accesoDatosOCP import prepararObjetoDatos
 from check_modules import check_modules
 from playShuffle import playShuffle
 from imprimirCancionesReproducidas import imprimirCancionesReproducidas
