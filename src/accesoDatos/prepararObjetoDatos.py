@@ -1,10 +1,9 @@
-
-# un intento de implementar el patron SOLID OCP (Open Closesd)
-# dentro del patron fachada para acceder
-# a distintos ficheros
-
-import xml.etree.ElementTree as ET
-
+#To succesfuslly invoke the function, as it is in another folder,
+#we need to specify its path with 'sys'. And then it is possible to call it.
+from sys import path as systemPath
+systemPath.insert(0, './src/accesoDatos/')
+from prepararXML import prepararXML
+from prepararTXT import prepararTXT
 
 def prepararObjetoDatos(*args):
     # (ruta acceso, parametros configuración)
@@ -31,42 +30,24 @@ def prepararObjetoDatos(*args):
     # eval provoca que se ejecute la funcion
     return eval(operaciones[extensionFichero])
 
-
-def prepararXML(data, xmlns):
-
-    arbol = ET.parse(data)
-    root = arbol.getroot()
-
-    trackList = root.find("xmlns:trackList", xmlns)
-
-    libreria = {track.find("xmlns:title", xmlns).text:
-                {
-                    "artist": track.find("xmlns:creator", xmlns).text,
-                    "album": track.find("xmlns:album", xmlns).text,
-                    "location": track.find("xmlns:location", xmlns).text
-                }
-                for track in trackList}
-
-    return libreria
-
-
-def prepararTXT(data, opciones):
-    # mock function
-    return "Es un fichero de texto"
-
-
 if __name__ == "__main__":
     
+    #To succesfuslly invoke the function, as it is in another folder,
+    #we need to specify its path with 'sys'. And then it is possible to call it.
+    from sys import path as systemPath
+    systemPath.insert(0, './src/')
     from vlcVariables import data, xmlns
 
+    #Prueba con fichero con extension XML.
     libreria = prepararObjetoDatos(data, xmlns)
 
     print('\n' + '#' * 3 + " LIBRERIA " + '#' * 3 + '\n')
     print(libreria)
 
-    data = "mockfile.txt"
+    #Prueba con fichero con extension TXT.
+    '''data = "mockfile.txt"
 
     libreria = prepararObjetoDatos(data, "otro")
 
     print('\n' + '#' * 3 + " LIBRERIA " + '#' * 3 + '\n')
-    print(libreria)
+    print(libreria)'''
