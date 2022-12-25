@@ -52,37 +52,12 @@ def prepararXML(data, xmlns):
 
 def prepararTXT(data, opciones):
     # mock function
-    return "fichero de texto"
+    return "Es un fichero de texto"
 
 
 if __name__ == "__main__":
-    '''
-    Necesitamos este objeto en memoria:
-
-    libreria = {"California_Uber_Alles.mp3":
-                    {"track-number": 3,
-                     "artist": "Dead Kennedys",
-                     "album": "Dead Kennedys",
-                     "location": "./biblioteca/California_Uber_Alles.mp3"},
-                "Seattle_Party":
-                    {"track-number": 1,
-                     "artist": "Chastity Belt",
-                     "album": "No regrets",
-                     "location": "./biblioteca/Seattle_Party.flac"},
-                "King_Kunta":
-                    {"track-number": 3,
-                     "artist": "Kendrick Lamar",
-                     "album": "To Pimp A Butterfly",
-                     "location": "./biblioteca/King_Kunta.mp3"}
-                }
-    '''
-
-    # espacios de nombres de los elementos del schema xspf y vlc
-    xmlns = {"xmlns": "http://xspf.org/ns/0/",
-             "xmlns:vlc": "http://www.videolan.org/vlc/playlist/ns/0/"}
-
-    # origen de los datos: un fichero XML
-    data = "listaPlayShuffleVLC.xspf"
+    
+    from vlcVariables import data, xmlns
 
     libreria = prepararObjetoDatos(data, xmlns)
 
