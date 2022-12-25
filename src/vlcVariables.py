@@ -1,4 +1,4 @@
-from accesoDatosOCP import prepararObjetoDatos
+from accesoDatos.prepararObjetoDatos import prepararObjetoDatos
 from pathlib import Path
 from os import getcwd as getCurrentDirectory
 
