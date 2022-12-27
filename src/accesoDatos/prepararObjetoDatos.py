@@ -36,7 +36,7 @@ if __name__ == "__main__":
     #we need to specify its path with 'sys'. And then it is possible to call it.
     from sys import path as systemPath
     systemPath.insert(0, './src/')
-    from vlcVariables import data, xmlns
+    from datos.vlcVariables import data, xmlns
 
     #Prueba con fichero con extension XML.
     libreria = prepararObjetoDatos(data, xmlns)

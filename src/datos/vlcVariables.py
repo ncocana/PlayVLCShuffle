@@ -1,3 +1,7 @@
+#To succesfuslly invoke the function, as it is in another folder,
+#we need to specify its path with 'sys'. And then it is possible to call it.
+from sys import path as systemPath
+systemPath.insert(0, './src/')
 from accesoDatos.prepararObjetoDatos import prepararObjetoDatos
 from pathlib import Path
 from os import getcwd as getCurrentDirectory
@@ -9,8 +13,12 @@ xmlns = {"xmlns": "http://xspf.org/ns/0/",
 
 # origen de los datos: un fichero XML
 working_directory = Path(getCurrentDirectory())
-pathFileXML = working_directory / "src" / "listaPlayShuffleVLC.xspf"
+pathFileXML = working_directory / "src" / "datos" / "listaPlayShuffleVLC.xspf"
 data = str(pathFileXML)
+
+playList = {}
+
+libreria = prepararObjetoDatos(data, xmlns)
 
 '''
 Estructuras de datos en memoria:
@@ -48,7 +56,3 @@ libreria = {"California_Uber_Alles.mp3":
                  "location": "./biblioteca/Headless.mp3"}
             }
 '''
-
-playList = {}
-
-libreria = prepararObjetoDatos(data, xmlns)
