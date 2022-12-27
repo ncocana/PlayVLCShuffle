@@ -1,6 +1,10 @@
-from iniciarPlayList import iniciarPlayList
-from seleccionaCancionRandom import seleccionaCancionRandom
-from checkPlaySuffle import checkPlaySuffle
+#To succesfuslly invoke the function, as it is in another folder,
+#we need to specify its path with 'sys'. And then it is possible to call it.
+from sys import path as systemPath
+systemPath.insert(0, './src/')
+from shufflePlayList.iniciarPlayList import iniciarPlayList
+from shufflePlayList.seleccionaCancionRandom import seleccionaCancionRandom
+from checkRoutines.checkPlaySuffle import checkPlaySuffle
 
 def playShuffle(libreria, playList):
 

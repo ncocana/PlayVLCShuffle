@@ -1,5 +1,9 @@
+#To succesfuslly invoke the function, as it is in another folder,
+#we need to specify its path with 'sys'. And then it is possible to call it.
+from sys import path as systemPath
+systemPath.insert(0, './src/')
+from checkRoutines.checkSeleccionaCancionRandom import checkSeleccionaCancionRandom
 import random
-from checkSeleccionaCancionRandom import checkSeleccionaCancionRandom
 
 def seleccionaCancionRandom(libreria):
 
